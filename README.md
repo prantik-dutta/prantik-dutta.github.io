@@ -1,6 +1,6 @@
 # Prantik Dutta
 
-**Aerospace Engineer: Experimental Aerodynamics | Wind Tunnel Testing | Instrumentation | Propeller Aerodynamics**
+**Aerospace Engineer: Experimental Aerodynamics · Wind Tunnel Testing · Instrumentation · Propeller Aerodynamics**
 
 [Email](mailto:dutta.prantik13@gmail.com) · [LinkedIn](https://www.linkedin.com/in/prantik-dutta-721447182) · [MSc Thesis](https://resolver.tudelft.nl/uuid:d76e911a-a6f4-4718-b5b9-d69512647b58) · [ORCID](https://orcid.org/0000-0003-2318-2727)
 
