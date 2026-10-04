@@ -9,9 +9,9 @@ title: "MSc Thesis: Unsteady Surface Pressure in a Propeller Slipstream"
 
 *MSc thesis, TU Delft, Aerodynamics & Wind Energy, 2025. Full title: "Quantifying Unsteady Surface Pressure Fluctuations Induced by a Propeller Slipstream Using a Flexible PCB Measurement Device". [Read the full thesis](https://resolver.tudelft.nl/uuid:d76e911a-a6f4-4718-b5b9-d69512647b58).*
 
-**Experimental aerodynamics:** propeller slipstream · negative thrust · unsteady surface pressure · laminar separation bubble · tip vortex · phase-locked averaging · oil-flow visualisation
+**Experimental aerodynamics:** propeller slipstream · negative thrust · unsteady surface pressure · laminar separation bubble · tip vortex · phase-locked averaging · oil-flow visualisation · wind tunnel testing
 
-**Test engineering:** wind tunnel campaigns (M-Tunnel, SLT) · test matrix planning · sensor calibration and validation · MEMS microphones and pressure sensors · multichannel data acquisition · spectral analysis (Welch PSD) · MATLAB · Python
+**Test engineering:** test planning · test matrix design · test execution · root cause analysis · troubleshooting · fault diagnosis · sensor calibration and validation · instrumentation · multichannel data acquisition · signal processing (MATLAB, Python) · spectral analysis · test reporting
 
 ## Overview
 
