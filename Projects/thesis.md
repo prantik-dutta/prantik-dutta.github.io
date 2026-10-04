@@ -9,6 +9,10 @@ title: "MSc Thesis: Unsteady Surface Pressure in a Propeller Slipstream"
 
 *MSc thesis, TU Delft, Aerodynamics & Wind Energy, 2025. Full title: "Quantifying Unsteady Surface Pressure Fluctuations Induced by a Propeller Slipstream Using a Flexible PCB Measurement Device". [Read the full thesis](https://resolver.tudelft.nl/uuid:d76e911a-a6f4-4718-b5b9-d69512647b58).*
 
+**Experimental aerodynamics:** propeller slipstream · negative thrust · unsteady surface pressure · laminar separation bubble · tip vortex · phase-locked averaging · oil-flow visualisation
+
+**Test engineering:** wind tunnel campaigns (M-Tunnel, SLT) · test matrix planning · sensor calibration and validation · MEMS microphones and pressure sensors · multichannel data acquisition · spectral analysis (Welch PSD) · MATLAB · Python
+
 ## Overview
 
 A wing behind a propeller is hit by the tip vortex and the blade wake of every passing blade. That changes the loading on the wing, where the boundary layer turns turbulent, and the noise. Very little unsteady surface-pressure data has been published for a propeller running in negative thrust, the regime used for regenerative braking. That gap is what the thesis set out to fill.
