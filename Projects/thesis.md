@@ -50,9 +50,15 @@ The measurements were made with a flexible printed circuit board that carries 18
 - **Spanwise coverage:** the board stays fixed and the sting is moved vertically, so each run samples a different spanwise position.
 - **Flow visualisation:** fluorescent oil under UV light for each case.
 
+![The three TUD XPROP-S propellers available for the campaign, with 45°, 30° and 53° blade pitch. Results use the 30° and 45° ones](../images/thesis-propellers.jpg)
+
 ![Test section of the SLT with the nacelle, airfoil model and sensor board](../images/thesis-slt-setup.jpg)
 
 ![Working on the test section between runs](../images/thesis-in-the-tunnel.jpg)
+
+![Left: the propeller mounted on the nacelle upstream of the airfoil with the sensor board. Right: the same setup during an oil-flow run under UV light](../images/thesis-propeller-setup-pair.jpg)
+
+*Left: the propeller on its nacelle, upstream of the airfoil with the sensor board. Right: the same setup during an oil-flow run, with the airfoil coated in fluorescent oil under UV light.*
 
 ## Method
 
@@ -98,7 +104,7 @@ The phase-averaged signal there shows six sharp pressure dips per revolution, on
 
 ![Phase-averaged pressure at three spanwise positions for J = 0.8](../images/thesis-phase-tip-vortex.png)
 
-### 5. In negative thrust, the vortex is weaker, and the spectrum turns broadband
+### 5. In negative thrust, the vortex is weaker and the spectrum turns broadband
 
 At J = 1.8 and 0°, the positive-thrust case still shows a sharp dip at every blade passage. In negative thrust the dips are shallow and spread over a wider range of phase angles. The blade-passing tones decay and broadband fluctuations take over. The likely reason is the blade loading: in negative thrust the tips carry little load, so the tip vortex is weak.
 
@@ -107,7 +113,7 @@ At J = 1.8 and 0°, the positive-thrust case still shows a sharp dip at every bl
 Two further findings:
 
 - The slipstream affects the airfoil well beyond its own edge, across the whole span that was measured.
-- In negative thrust, the highest fluctuations are not on the tip-vortex trace. They sit where the slipstream meets the shear layer of the separation bubble.
+- In negative thrust the highest fluctuations are not on the tip-vortex trace. They sit where the slipstream meets the shear layer of the separation bubble.
 
 ![Oil-flow visualisation on the suction side: nacelle only, positive thrust and negative thrust](../images/thesis-oilflow.jpg)
 
