@@ -6,6 +6,10 @@
 
 ---
 
+![Prantik Dutta at his MSc graduation at TU Delft, and installing a test setup in the Small Low-Turbulence Tunnel](images/about-photos.jpg)
+
+*Left: MSc graduation, TU Delft (Aerodynamics & Wind Energy). Right: installing the setup in the Small Low-Turbulence Tunnel.*
+
 ## About
 
 I'm an aerospace engineer with an MSc from TU Delft (Aerodynamics & Wind Energy, 2023–2025). Most of my work has been in the wind tunnel: setting up the test, installing and calibrating the instrumentation, running the campaign, and checking the data before anyone relies on it. I like the hands-on side of testing, including the troubleshooting and root-cause analysis.
