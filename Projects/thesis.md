@@ -54,8 +54,6 @@ The measurements were made with a flexible printed circuit board that carries 18
 
 ![Test section of the SLT with the nacelle, airfoil model and sensor board](../images/thesis-slt-setup.jpg)
 
-![Working on the test section between runs](../images/thesis-in-the-tunnel.jpg)
-
 ![Left: the propeller mounted on the nacelle upstream of the airfoil with the sensor board. Right: the same setup during an oil-flow run under UV light](../images/thesis-propeller-setup-pair.jpg)
 
 *Left: the propeller on its nacelle, upstream of the airfoil with the sensor board. Right: the same setup during an oil-flow run, with the airfoil coated in fluorescent oil under UV light.*
