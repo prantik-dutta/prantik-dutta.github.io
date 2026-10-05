@@ -134,3 +134,12 @@ Induced drag of a wing with a winglet at cant angles from 0° to 90° in AVL: 15
 
 📄 [Detailed description](Projects/avl-winglet)
 
+---
+
+## Industry Project
+
+### Hydrogen-Powered Blended Wing Body Aircraft: Joint Interdisciplinary Project with Airbus
+
+Ten-week study in a team of seven with Airbus Netherlands: fuel selection, hydrogen turbofan design, tank and weight estimation and mission emissions for a blended wing body aircraft, with a cost and stakeholder analysis by the non-technical part of the team.
+
+📄 [Detailed description](Projects/jip-airbus)
