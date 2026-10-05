@@ -62,7 +62,7 @@ Undergraduate project and journal publication: lift and drag of a flat delta win
 
 ### PC-Based Data Acquisition in LabVIEW: Four Fluid Dynamics Experiments
 
-This one-week course covered PC-based data acquisition for fluid dynamics and thermodynamics experiments. The theory sessions covered the measurement of pressure, temperature, humidity, force, velocity and flow rate, the transmission of sensor signals to a data acquisition system, and LabVIEW programming. In the laboratory, the participants worked in four groups that rotated through four experiments, with two laboratory sessions per experiment. For each one, a LabVIEW program was written on National Instruments CompactDAQ hardware to acquire the sensor signals, run the test and log the data.
+One-week course at the Czech Technical University in Prague on PC-based data acquisition. LabVIEW programs on National Instruments CompactDAQ hardware acquired the sensor signals, ran the test and logged the data in four experiments: air flow rate control, moist air properties, propeller characteristics and aerodynamic forces on a body in a wind tunnel.
 
 📄 [Detailed description](Projects/labview-daq)
 
