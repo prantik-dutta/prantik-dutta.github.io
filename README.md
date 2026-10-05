@@ -8,7 +8,7 @@
 
 ![Prantik Dutta at his MSc graduation at TU Delft, and installing a test setup in the Small Low-Turbulence Tunnel](images/about-photos.jpg)
 
-*Left: MSc graduation, TU Delft (Aerodynamics & Wind Energy). Right: installing the setup in the Small Low-Turbulence Tunnel.*
+*Left: MSc graduation, TU Delft (Aerodynamics & Wind Energy). Right: installing the setup in the Small Low-Turbulence Wind Tunnel.*
 
 ## About
 
