@@ -67,5 +67,13 @@ This one-week course covered PC-based data acquisition for fluid dynamics and th
 📄 [Detailed description](Projects/labview-daq)
 
 
+---
 
+## Propeller & Rotor Aerodynamics
+
+### Rotor Aerodynamics: BEM, Lifting-Line and Unsteady Panel Models
+
+Three Python models of increasing fidelity: a blade element momentum model and a frozen-wake lifting-line model of a wind turbine rotor, compared against each other, and an unsteady vortex panel model of a pitching flat plate.
+
+📄 [Detailed description](Projects/rotor-models)
 
