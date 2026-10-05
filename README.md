@@ -77,3 +77,30 @@ Three Python models of increasing fidelity: a blade element momentum model and a
 
 📄 [Detailed description](Projects/rotor-models)
 
+---
+
+## Computational Fluid Dynamics
+
+### RANS Simulation of a Two-Element High-Lift Airfoil
+
+Steady RANS simulations of the NLR 7301 airfoil with flap on a structured multi-block mesh (ICEM CFD, Fluent), compared with measured surface pressure, lift and drag. Lift within 0.7 % of the experiment on the fine grid.
+
+📄 [Detailed description](Projects/rans-high-lift)
+
+### Incompressible Navier-Stokes Solver: Lid-Driven Cavity Validation
+
+A two-dimensional incompressible flow solver in Python, formulated with incidence and Hodge matrices and validated against the benchmark solution of the lid-driven cavity at a Reynolds number of 1000.
+
+📄 [Detailed description](Projects/navier-stokes-solver)
+
+### Large Eddy Simulation: DNS Data Analysis and Turbulent Channel Flow
+
+Spectral analysis and filtering of DNS data in Python to compare subgrid-scale models, and large eddy simulations of a turbulent channel flow in OpenFOAM on two grids with five model settings.
+
+📄 [Detailed description](Projects/les)
+
+### Vortex-Induced Vibration of a Cylinder: Fluid-Structure Interaction
+
+Two-way fluid-structure interaction of an elastically mounted cylinder in ANSYS CFX with rigid-body coupling and a moving mesh, comparing coupling schemes, time steps and mesh deformation methods.
+
+📄 [Detailed description](Projects/fsi-cylinder)
