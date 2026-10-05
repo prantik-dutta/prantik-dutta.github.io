@@ -90,7 +90,7 @@ A sensitivity study covered the spanwise spacing, the assumed wake convection sp
 - **Cases:** steady flow at angles of attack from −5° to 10°, and pitching motion at reduced frequencies of 0.02, 0.05 and 0.1.
 - **Convergence:** 40 panels and a time step of 1/55 of the pitching period were selected from a convergence study.
 
-- **Related work:** the steady solver was also applied in AE4130 Aircraft Aerodynamics, where the pressure distribution on the flat plate at 6° was compared with data for the NACA 0006 airfoil.
+**Related work:** the steady solver was also applied in AE4130 Aircraft Aerodynamics, where the pressure distribution on the flat plate at 6° was compared with data for the NACA 0006 airfoil.
 
 ![Lift coefficient loops for different numbers of panels and different time steps](../images/rotor-panel-convergence.jpg)
 
