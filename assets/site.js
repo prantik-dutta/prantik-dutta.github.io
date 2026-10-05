@@ -129,6 +129,64 @@
     });
   }
 
+  /* ---------- homepage photo: two photos joined by a white strip become two framed photos ----------
+     The image is read once to find the white strip between the photos. Each half is then shown
+     in its own frame, with its part of the caption ("Left: ... Right: ...") written on the photo.
+     An image without such a strip stays one framed photo with the caption below it. */
+  function framePhotos(fig) {
+    var img = fig.querySelector('img');
+    var W = img.naturalWidth, H = img.naturalHeight;
+    var cut = null;
+    try {
+      var cw = Math.min(W, 1200), ch = Math.max(1, Math.round(cw * H / W));
+      var cv = document.createElement('canvas');
+      cv.width = cw; cv.height = ch;
+      var ctx = cv.getContext('2d');
+      ctx.drawImage(img, 0, 0, cw, ch);
+      var px = ctx.getImageData(0, 0, cw, ch).data;
+      var run = 0, best = 0, bestEnd = -1;
+      for (var x = Math.round(cw * 0.15); x < Math.round(cw * 0.85); x += 1) {
+        var white = true;
+        for (var y = 0; y < ch; y += 3) {
+          var i = (y * cw + x) * 4;
+          if (px[i] < 238 || px[i + 1] < 238 || px[i + 2] < 238) { white = false; break; }
+        }
+        run = white ? run + 1 : 0;
+        if (run > best) { best = run; bestEnd = x; }
+      }
+      if (best >= 2) cut = { a: (bestEnd - best) / cw, b: (bestEnd + 2) / cw };   /* one pixel of margin on each side */
+    } catch (err) { cut = null; }
+    if (!cut) return;
+
+    var capEl = fig.querySelector('figcaption');
+    var capText = capEl ? capEl.textContent.trim() : '';
+    var parts = /^left:\s*(.+?)\.?\s+right:\s*(.+?)\.?$/i.exec(capText);
+    var alt = img.getAttribute('alt') || '';
+
+    function tile(from, to, label, first) {
+      var t = el('div', 'photo');
+      var w = (to - from) * W;
+      t.style.flex = Math.round(w) + ' 1 0';
+      t.style.aspectRatio = Math.round(w) + ' / ' + H;
+      var pic = first ? img : img.cloneNode(false);
+      pic.alt = first ? alt : '';
+      /* each half is anchored to its outer edge */
+      pic.style.left = first ? '0' : 'auto';
+      pic.style.right = first ? 'auto' : '0';
+      t.appendChild(pic);
+      if (label) t.appendChild(el('span', 'photo-label', label.charAt(0).toUpperCase() + label.slice(1)));
+      return t;
+    }
+
+    var row = el('div', 'photo-row');
+    var right = tile(cut.b, 1, parts && parts[2], false);   /* made first: it copies the image before the left half moves it */
+    row.appendChild(tile(0, cut.a, parts && parts[1], true));
+    row.appendChild(right);
+    fig.insertBefore(row, fig.firstChild);
+    fig.classList.add('is-split');
+    if (parts && capEl) fig.removeChild(capEl);
+  }
+
   /* ====================================================================
      Homepage
      ==================================================================== */
@@ -178,7 +236,12 @@
       }
       hero.appendChild(k);
     });
-    if (photo) hero.appendChild(photo);
+    if (photo) {
+      hero.appendChild(photo);
+      var shot = photo.querySelector('img');
+      if (shot.complete && shot.naturalWidth) framePhotos(photo);
+      else shot.addEventListener('load', function () { framePhotos(photo); });
+    }
     main.insertBefore(hero, main.firstChild);
 
     /* --- sections: one per second-level heading --- */
