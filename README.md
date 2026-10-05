@@ -143,3 +143,18 @@ Induced drag of a wing with a winglet at cant angles from 0° to 90° in AVL: 15
 Ten-week study in a team of seven with Airbus Netherlands: fuel selection, hydrogen turbofan design, tank and weight estimation and mission emissions for a blended wing body aircraft, with a cost and stakeholder analysis by the non-technical part of the team.
 
 📄 [Detailed description](Projects/jip-airbus)
+
+
+---
+
+## Publications & Aeromodelling
+
+### Publications
+
+Four papers from the bachelor's degree: a first-author paper on bio-inspired slotted winglets, two co-authored papers on an albatross-inspired UAV wing with a bell-shaped lift distribution, and a single-author review.
+
+📄 [List of publications](Projects/publications)
+
+### Aeromodelling: RC Aircraft Design and Build
+
+Designed and built radio-controlled aircraft from Depron and XPS foam in a student team for aeromodelling competitions during the bachelor's degree. Sized the wings for the mission (gliding or aerobatics) through aspect ratio, taper ratio and tail sizing calculations, and selected the motors, speed controllers, propellers and servos.
