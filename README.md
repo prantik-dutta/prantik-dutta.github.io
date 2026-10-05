@@ -69,13 +69,21 @@ This one-week course covered PC-based data acquisition for fluid dynamics and th
 
 ---
 
-## Rotor & Wake Aerodynamics
+## Propeller and Rotor-Wake Aerodynamics
 
 ### Rotor Aerodynamics: BEM, Lifting-Line and Unsteady Panel Models
 
 Three Python models of increasing fidelity: a blade element momentum model and a frozen-wake lifting-line model of a wind turbine rotor, compared against each other, and an unsteady vortex panel model of a pitching flat plate.
 
 📄 [Detailed description](Projects/rotor-models)
+
+
+### Propeller Performance Analysis with a Blade Element Momentum Code
+
+Blade element momentum analysis of the APC Slow Flyer 10×7 propeller in JavaProp, compared with reference performance data, with a study of the effect of blade number and diameter on the efficiency.
+
+📄 [Detailed description](Projects/propeller-bem)
+
 
 ---
 
@@ -104,3 +112,25 @@ Spectral analysis and filtering of DNS data in Python to compare subgrid-scale m
 Two-way fluid-structure interaction of an elastically mounted cylinder in ANSYS CFX with rigid-body coupling and a moving mesh, comparing coupling schemes, time steps and mesh deformation methods.
 
 📄 [Detailed description](Projects/fsi-cylinder)
+
+
+## Low-Fidelity Aerodynamic Analysis
+
+### Airfoil Analysis and Redesign in XFOIL: Transition and Laminar Separation Bubble
+
+Analysis of a NACA 2915 airfoil in XFOIL, an inverse redesign that raises the lift-to-drag ratio by 4 % at the same thickness, and removal of a laminar separation bubble by fixing the transition, which lowers the drag by 7 %.
+
+📄 [Detailed description](Projects/xfoil-airfoil)
+
+### Two-Element High-Lift Airfoil in JavaFoil: Panel Method against Experiment
+
+Lift curve of the NLR 7301 airfoil with flap from a panel method with three stall models, compared with experimental data and with the RANS simulation of the same case.
+
+📄 [Detailed description](Projects/javafoil-high-lift)
+
+### Winglet and Wing Planform Study with a Vortex Lattice Method
+
+Induced drag of a wing with a winglet at cant angles from 0° to 90° in AVL: 15 % reduction for the vertical winglet and 24 % for the tip extension.
+
+📄 [Detailed description](Projects/avl-winglet)
+
