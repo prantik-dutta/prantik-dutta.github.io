@@ -69,7 +69,7 @@ This one-week course covered PC-based data acquisition for fluid dynamics and th
 
 ---
 
-## Propeller & Rotor Aerodynamics
+## Rotor & Wake Aerodynamics
 
 ### Rotor Aerodynamics: BEM, Lifting-Line and Unsteady Panel Models
 
