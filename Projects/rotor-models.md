@@ -27,7 +27,7 @@ This project developed three aerodynamic models of increasing fidelity in Python
 
 ### Method
 
-- **Model:** the rotor disc is divided into annuli. For each annulus, the blade element forces from the airfoil polar are balanced against the momentum change of the flow, and the axial and azimuthal induction factors are iterated until they converge.
+- **Model:** The rotor disc is divided into annuli. For each annulus, the blade element forces from the airfoil polar are balanced against the momentum change of the flow, and the axial and azimuthal induction factors are iterated until they converge.
 - **Corrections:** Prandtl tip and root corrections for the finite number of blades, and the Glauert correction for heavily loaded rotors.
 - **Inputs:** the polar of the DU 95-W-180 airfoil, the blade geometry and the operating conditions.
 - **Cases:** tip speed ratios of 6, 8 and 10.
@@ -90,6 +90,8 @@ A sensitivity study covered the spanwise spacing, the assumed wake convection sp
 - **Cases:** steady flow at angles of attack from −5° to 10°, and pitching motion at reduced frequencies of 0.02, 0.05 and 0.1.
 - **Convergence:** 40 panels and a time step of 1/55 of the pitching period were selected from a convergence study.
 
+- **Related work:** the steady solver was also applied in AE4130 Aircraft Aerodynamics, where the pressure distribution on the flat plate at 6° was compared with data for the NACA 0006 airfoil.
+
 ![Lift coefficient loops for different numbers of panels and different time steps](../images/rotor-panel-convergence.jpg)
 
 ### Results
@@ -98,7 +100,7 @@ A sensitivity study covered the spanwise spacing, the assumed wake convection sp
 
 ![Left: velocity field around the plate at an angle of attack of 5°. Right: lift curve of the panel model against thin-airfoil theory](../images/rotor-panel-steady.jpg)
 
-- **Pitching case:** the lift follows a hysteresis loop. At a reduced frequency of 0.02 the loop stays close to the steady lift curve. At higher reduced frequencies the loop widens and the lift amplitude decreases, because the shed wake vorticity opposes the change in circulation on the plate.
+- **Pitching case:** the lift follows a hysteresis loop. At a reduced frequency of 0.02, the loop stays close to the steady lift curve. At higher reduced frequencies, the loop widens, and the lift amplitude decreases, because the shed wake vorticity opposes the change in circulation on the plate.
 
 ![Left: lift coefficient loops at reduced frequencies of 0.02, 0.05 and 0.1. Right: the loop at 0.1 against the steady lift curve](../images/rotor-panel-unsteady.jpg)
 
