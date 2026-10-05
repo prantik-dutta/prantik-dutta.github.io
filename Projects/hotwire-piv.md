@@ -7,78 +7,103 @@ title: "Hot-Wire Anemometry and PIV: NACA 0012 Wake"
 
 # Hot-Wire Anemometry and PIV: NACA 0012 Wake
 
-*Flow Measurement Techniques (AE4180), TU Delft, 2024. Group lab exercise with three teammates.*
+*Group lab exercise (team of four), AE4180 Flow Measurement Techniques, TU Delft, June 2024. Measured in the W-Tunnel.*
+
+**Experimental aerodynamics:** hot-wire anemometry (CTA) · particle image velocimetry (PIV) · airfoil wake · vortex shedding · flow separation · velocity fluctuations · spectral analysis
+
+**Test engineering:** sensor calibration against a Pitot-static reference · selection of overheat ratio and sampling parameters · PIV setup design · laser safety · data acquisition (LabVIEW, DaVis) · image processing and cross-correlation (MATLAB) · cross-validation of two measurement techniques
 
 ## Overview
 
-We measured the flow around a NACA 0012 airfoil at 0°, 5° and 15° angle of attack with two techniques that complement each other: a single constant-temperature hot-wire for high-frequency point measurements, and planar particle image velocimetry (PIV) for full-field velocity maps. Both were run in the W-tunnel of the High-Speed Laboratory at 10 m/s, then compared on the same wake.
+This exercise measured the flow around a NACA 0012 airfoil at angles of attack of 0°, 5° and 15° with two techniques: a single-wire constant-temperature hot-wire anemometer and planar particle image velocimetry (PIV). Both were applied in the same wind tunnel at a freestream velocity of 10 m/s, and their results were compared in the wake of the airfoil.
 
-The aim was to see what each technique resolves well and where it breaks down, especially once the flow separates.
+The objectives were to:
+
+- set up and calibrate a hot-wire anemometer and measure the mean velocity, the velocity fluctuations and the spectra in the wake,
+- design and perform a planar PIV measurement of the flow field around the airfoil,
+- compare the two techniques on the same wake and determine the limits of each, in particular in separated flow.
+
+**My role:** member of a four-person team that performed the measurements, processed the data and wrote the report.
 
 ## Experimental Setup
 
-- **Facility:** W-tunnel, closed transparent test section of 0.40 × 0.40 m, free-stream velocity of 10 m/s set against a Pitot-static tube.
-- **Model:** Plexiglas NACA 0012 spanning the test section, chord 10 cm, rotated about the quarter-chord point.
-- **Hot-wire:** 5 µm platinum-plated tungsten wire on a Dantec 56C17 CTA bridge, read out with an NI data acquisition card through LabVIEW. Wake traverse from −40 to +40 mm in 21 steps, about 20% chord behind the trailing edge.
-- **PIV:** water-glycol fog (about 1 µm particles), Quantel Evergreen 200 Nd:YAG laser (8 ns pulses), 1628 × 1236 px CCD camera, acquisition and processing in DaVis, with a self-written MATLAB cross-correlation to compare against. Laser safety procedures were followed throughout.
+- **Facility:** W-Tunnel, TU Delft, with a closed transparent test section of 0.40 m × 0.40 m. The freestream velocity of 10 m/s was set with a Pitot-static tube.
+- **Model:** NACA 0012 airfoil made of Plexiglas, with a chord of 0.10 m, spanning the test section and rotated about the quarter-chord point.
+- **Hot-wire anemometer:** platinum-plated tungsten wire of 5 µm diameter on a Dantec 56C17 constant-temperature bridge, acquired with a National Instruments data acquisition card in LabVIEW. The wake was traversed from −40 mm to +40 mm in 21 steps, about 20 % chord behind the trailing edge.
+- **PIV system:** water-glycol fog with a mean particle diameter of about 1 µm, a Quantel Evergreen 200 Nd:YAG laser with a pulse duration of 8 ns, and a CCD camera with 1628 × 1236 pixels. Acquisition and processing were performed in DaVis. A cross-correlation code written in MATLAB was used for comparison. The laser safety procedures of the laboratory were applied.
 
 ## Method
 
-### Hot-wire
+### Hot-wire anemometry
 
-1. **Overheat ratio.** Measured the cord and probe resistances and set an overheat ratio of 0.5. This keeps the wire sensitive to small velocity changes while leaving margin against burning it out.
-2. **Calibration.** Swept the tunnel from 0 to 20 m/s in 2 m/s steps against the Pitot-static reference (5 s at 2 kHz per point) and fitted a fourth-order polynomial from voltage to velocity. The 10 m/s test condition sits in the middle of the calibrated range.
-3. **Acquisition time.** The autocorrelation of the voltage signal gave an integral time scale of about 4 ms, which sets a minimum sampling rate near 125 Hz. We sampled at 10 kHz for 3 s so the spectra reach well past the shedding frequencies.
+- **Overheat ratio:** the cable and probe resistances were measured, and an overheat ratio of 0.5 was set. This value gives sufficient velocity sensitivity with a margin against overheating the wire.
+- **Calibration:** the tunnel velocity was varied from 0 to 20 m/s in steps of 2 m/s against the Pitot-static reference, with 5 s of data at 2 kHz per point. A fourth-order polynomial was fitted between voltage and velocity. The test velocity of 10 m/s lies in the middle of the calibrated range.
+- **Sampling:** the autocorrelation of the signal gave an integral time scale of 4 ms, which corresponds to a minimum sampling frequency of about 125 Hz for statistics. The wake was sampled at 10 kHz for 3 s to resolve the spectra beyond the shedding frequency.
 
-### PIV
+### Particle image velocimetry
 
-1. **Design calculations.** Field of view of 1.5 chords (0.15 m) set the magnification (about 0.048), object and image distances, f-number (5.6) and a depth of focus of about 4 cm, larger than the laser sheet thickness so every illuminated particle is in focus.
-2. **Processing.** Masked the airfoil and the two regions where the transparent model refracts the sheet and leaves them dark, subtracted the per-pixel minimum over 10 images to remove background, and cross-correlated with multi-pass interrogation.
-3. **Parameter study.** Varied window size (16, 32, 64 px), overlap (0% vs 50%), pulse separation (75 µs vs 6 µs) and number of images (10 vs 100). A 32 px window with 50% overlap and multi-pass gave the best balance of resolution and noise.
+- **Setup design:** a field of view of 1.5 chords (0.15 m) gives a magnification of 0.048. With an f-number of 5.6, the depth of focus is about 4 cm, which exceeds the thickness of the laser sheet.
+- **Image processing:** the airfoil and the two regions shadowed by refraction in the transparent model were masked. The background was removed by subtracting the minimum intensity of each pixel over 10 images. The velocity was computed by cross-correlation with multi-pass interrogation.
+- **Parameter study:** the interrogation window size (16, 32 and 64 pixels), the overlap (0 % and 50 %), the pulse separation (75 µs and 6 µs) and the number of images (10 and 100) were varied. A window of 32 pixels with 50 % overlap and multi-pass interrogation was selected.
 
 ## Key Results
 
-### Hot-wire wake profiles
+### 1. Wake profiles from the hot-wire
 
-The velocity deficit and RMS fluctuation profiles show the wake widening and strengthening with angle of attack. At 0° the deficit is narrow and centred on the trailing edge. At 5° it shifts upward. At 15° the wake is wide, with strong shear layers on both sides and RMS fluctuations above 3 m/s.
+The velocity deficit and the fluctuation level in the wake increase with the angle of attack. At 0° the deficit is narrow and centred behind the trailing edge. At 5° it is displaced upward. At 15° the wake is wide, with shear layers on both sides and velocity fluctuations above 3 m/s.
 
-![Hot-wire velocity and RMS profiles at 0, 5 and 15 degrees](../images/hwa-profiles.png)
+![Mean velocity and velocity fluctuation profiles from the hot-wire at 0°, 5° and 15°](../images/hwa-profiles.png)
 
-### Spectra
+### 2. Spectra
 
-At 0° the spectrum is dominated by one sharp peak at about 420 Hz with a harmonic near 840 Hz, the signature of regular vortex shedding from the trailing edge. At 5° the energy spreads over a broad band. At 15°, in the shear layer, the energy moves to a low-frequency peak below 100 Hz, which points to much larger vortical structures once the flow separates.
+- **0°:** the spectrum has a single dominant peak at about 420 Hz with a harmonic near 840 Hz, which indicates periodic vortex shedding from the trailing edge.
+- **5°:** the energy is distributed over a broad band of frequencies.
+- **15°:** in the shear layer, the energy is concentrated below 100 Hz, which indicates larger vortical structures in the separated flow.
 
-![Power spectral density behind the trailing edge at 0 and 5 degrees, and in the shear layer at 15 degrees](../images/hwa-spectrum.png)
+These frequencies are outside the range of the PIV system, which acquires at a maximum of 15 Hz.
 
-PIV cannot see any of this. Its frame rate is a few hertz, so the highest frequency it can resolve is a few hertz as well, orders of magnitude below the 420 Hz peak.
+![Power spectral density behind the trailing edge at 0° and 5°, and in the shear layer at 15°](../images/hwa-spectrum.png)
 
-### PIV flow fields
+### 3. Flow fields from PIV
 
-At 0° the mean flow shows the expected symmetric acceleration around the airfoil and a thin wake. At 15° the flow separates: the mean field shows one large recirculation region above the airfoil with backflow toward the trailing edge, and the instantaneous field shows turbulent structures of many sizes in the shear layer.
+At 0° the mean flow is symmetric about the airfoil, with a thin wake. At 15° the flow is separated: the mean field contains a recirculation region above the airfoil with reversed flow toward the trailing edge, and the instantaneous field shows vortical structures of different sizes in the shear layer.
 
-![PIV velocity fields at 0 degrees, instantaneous (left) and mean (right)](../images/piv-0deg.png)
+![Velocity fields from PIV at 0°: instantaneous (left) and mean (right)](../images/piv-0deg.png)
 
-![PIV velocity fields at 15 degrees, instantaneous (left) and mean (right)](../images/piv-15deg.png)
+![Velocity fields from PIV at 15°: instantaneous (left) and mean (right)](../images/piv-15deg.png)
 
-### Effect of PIV processing parameters
+### 4. Effect of the PIV processing parameters
 
-A 16 px window loses particles between the two frames in the fast flow over the suction side, so the correlation returns near-zero velocities there. A 64 px window is too coarse to resolve the shear layer or the stagnation point. The 32 px window resolves both. A 6 µs pulse separation gave a noisy field because the particle displacement is small compared with the measurement error, and 100 images gave a visibly smoother mean than 10.
+- **Window size:** with a window of 16 pixels, particles leave the window between the two frames in the high-velocity region over the suction side, and the correlation returns velocities near zero there. A window of 64 pixels does not resolve the shear layer or the stagnation point. A window of 32 pixels resolves both.
+- **Pulse separation:** a separation of 6 µs gives a noisy field, because the particle displacement is small compared with the measurement error.
+- **Number of images:** the mean field from 100 images is smoother than the mean field from 10 images.
 
-![PIV at 15 degrees with 16, 32 and 64 pixel interrogation windows](../images/piv-window-size.png)
+![Velocity field from PIV at 15° with interrogation windows of 16, 32 and 64 pixels](../images/piv-window-size.png)
 
-### Cross-validation of the two techniques
+### 5. Comparison of the two techniques on the same wake
 
-Plotting both techniques on the same wake gave the clearest comparison. At 0° and 5° the streamwise velocity profiles agree closely, with the hot-wire reading slightly higher, which we attribute to calibration bias and post-processing differences. At 15° they disagree in the separated region: PIV shows negative velocity near the centre of the wake because it resolves the reversed flow, while a single hot-wire reads only velocity magnitude and returns a large positive value there. The RMS profiles agree better at 15° because the sign of the velocity drops out of the fluctuation level.
+- **Attached flow (0° and 5°):** the streamwise velocity profiles of the two techniques agree closely. The hot-wire values are slightly higher, which is attributed to calibration bias and to differences in the processing.
+- **Separated flow (15°):** the profiles differ in the separated region. PIV measures negative velocities near the centre of the wake, because it resolves the direction of the flow. A single hot-wire responds to the velocity magnitude only and returns positive values there.
+- **Fluctuations:** the fluctuation profiles agree better at 15°, because the fluctuation level does not depend on the sign of the velocity.
 
-![Streamwise velocity from PIV and hot-wire at 0, 5 and 15 degrees](../images/hwa-piv-velocity.png)
+![Streamwise velocity from PIV and from the hot-wire at 0°, 5° and 15°](../images/hwa-piv-velocity.png)
 
-![Velocity RMS from PIV and hot-wire at 0, 5 and 15 degrees](../images/hwa-piv-rms.png)
+![Velocity fluctuation from PIV and from the hot-wire at 0°, 5° and 15°](../images/hwa-piv-rms.png)
 
-## Takeaways
+### 6. Assessment of the techniques
 
-| | Hot-wire | PIV |
+| | Hot-wire anemometry | PIV |
 |---|---|---|
-| Strength | Very high temporal resolution, fast setup and processing | Full-field, non-intrusive, resolves flow direction, no calibration |
-| Limit | Needs calibration each run, intrusive, cannot resolve reversed flow, point measurement | Low temporal resolution, needs optical access, more error sources |
+| Strengths | High temporal resolution. Short setup and processing time. | Measures the whole field. Non-intrusive. Resolves the flow direction. Requires no velocity calibration. |
+| Limits | Requires calibration. Intrusive. Point measurement. A single wire does not resolve reversed flow. | Low temporal resolution. Requires optical access. More sources of error in setup and processing. |
 
-The two techniques cover each other's gaps. PIV shows where the flow separates and which way it moves, and the hot-wire shows how fast the wake is oscillating.
+The two techniques are complementary for this flow. PIV shows where the flow separates and in which direction it moves, and the hot-wire resolves the frequency content of the wake.
+
+## Limitations
+
+- **Hot-wire in separated flow:** a single-wire probe does not distinguish the flow direction, so its mean velocity in the reversed-flow region at 15° is not valid.
+- **PIV temporal resolution:** the system acquires at a maximum of 15 Hz, so the PIV data give statistics and instantaneous fields but no spectra.
+- **PIV coverage:** two regions near the transparent model are shadowed by refraction of the laser sheet and contain no data.
+- **Agreement between the techniques:** the small offset between the hot-wire and PIV velocities at 0° and 5° was not resolved further.
+
+[← Back to portfolio](../)
