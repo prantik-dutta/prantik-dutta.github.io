@@ -38,6 +38,15 @@ Validated a flexible sensor board with 18 microphones and 6 pressure sensors in 
 
 📄 [Detailed description](Projects/thesis)
 
+
+### Wind Tunnel Test Campaign: Stability and Control with One Engine Inoperative
+
+In a team of four, designed and ran a 105-point test matrix on a propeller aircraft model in the TU Delft Low-Turbulence Tunnel, and quantified directional stability, rudder effectiveness, trimmed performance and propeller noise with one engine inoperative.
+
+📄 [Detailed description](Projects/oei-test)
+
+
+
 ### Hot-Wire Anemometry and PIV: NACA 0012 Wake
 
 Calibrated a constant-temperature hot-wire against a pitot-static reference and compared it with planar PIV on the same wake at 0°, 5° and 15° angle of attack.
