@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+{% assign is_home = false %}
+{% if page.url == "/" or page.path == "README.md" or page.path == "index.md" %}{% assign is_home = true %}{% endif %}
+{% assign site_name = "Prantik Dutta" %}
+{% assign site_tagline = "Aerospace Engineering Portfolio" %}
+{% assign site_summary = "Wind tunnel testing, instrumentation, propeller aerodynamics and CFD: project write-ups with setups, methods and results by Prantik Dutta, MSc Aerospace Engineering, TU Delft." %}
+<title>{% if is_home %}{{ site_name }} | {{ site_tagline }}{% else %}{{ page.title | escape }} | {{ site_name }}{% endif %}</title>
+<meta name="description" content="{% if page.description %}{{ page.description | escape }}{% else %}{{ site_summary }}{% endif %}">
+<meta name="author" content="{{ site_name }}">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="{{ site_name }} | {{ site_tagline }}">
+<meta property="og:title" content="{% if is_home %}{{ site_name }} | {{ site_tagline }}{% else %}{{ page.title | escape }}{% endif %}">
+<meta property="og:description" content="{% if page.description %}{{ page.description | escape }}{% else %}{{ site_summary }}{% endif %}">
+<meta property="og:image" content="{{ '/assets/share.jpg' | absolute_url }}">
+<meta name="theme-color" content="#ffffff">
+<link rel="icon" href="{{ '/assets/favicon.svg' | relative_url }}" type="image/svg+xml">
+<link rel="preload" href="{{ '/assets/fonts/IBMPlexSans-Regular.woff2' | relative_url }}" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="{{ '/assets/fonts/IBMPlexSansCondensed-SemiBold.woff2' | relative_url }}" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="{{ '/assets/site.css' | relative_url }}">
+<script>
+  /* Hide the content until site.js has arranged it; show it anyway after 1.5 s if the script fails. */
+  document.documentElement.className = 'js';
+  setTimeout(function () { document.documentElement.classList.add('ready'); }, 1500);
+</script>
+</head>
+<body class="{% if is_home %}home{% else %}project{% endif %}" data-root="{{ '/' | relative_url }}">
+
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="site-header">
+  <div class="wrap bar">
+    <a class="brand" href="{{ '/' | relative_url }}">
+      <span class="brand-name">{{ site_name }}</span>
+      <span class="brand-sub">{{ site_tagline }}</span>
+    </a>
+    <nav class="site-nav" aria-label="Site">
+      <a href="{{ '/' | relative_url }}#projects">Projects</a>
+      <a class="nav-wide" href="{{ '/' | relative_url }}#about">About</a>
+      <a class="nav-wide" href="https://www.linkedin.com/in/prantik-dutta-721447182">LinkedIn</a>
+      <a class="nav-cta" href="mailto:dutta.prantik13@gmail.com">Email</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main" class="wrap content">
+{{ content }}
+</main>
+
+<footer class="site-footer">
+  <div class="wrap foot">
+    <div class="foot-id">
+      <span class="foot-name">{{ site_name }}</span>
+      <span class="foot-line">Aerospace engineer · MSc Aerospace Engineering, TU Delft</span>
+    </div>
+    <nav class="foot-links" aria-label="Contact">
+      <a href="mailto:dutta.prantik13@gmail.com">Email</a>
+      <a href="https://www.linkedin.com/in/prantik-dutta-721447182">LinkedIn</a>
+      <a href="https://orcid.org/0000-0003-2318-2727">ORCID</a>
+      <a href="https://resolver.tudelft.nl/uuid:d76e911a-a6f4-4718-b5b9-d69512647b58">MSc thesis</a>
+    </nav>
+    <span class="foot-date">Updated {{ site.time | date: "%B %Y" }}</span>
+  </div>
+</footer>
+
+<script src="{{ '/assets/site.js' | relative_url }}"></script>
+</body>
+</html>
