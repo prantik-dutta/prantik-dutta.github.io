@@ -62,7 +62,7 @@ Undergraduate project and journal publication: lift and drag of a flat delta win
 
 ### PC-Based Data Acquisition in LabVIEW: Four Fluid Dynamics Experiments
 
-One-week ATHENS course at the Czech Technical University in Prague. Built LabVIEW interfaces on NI CompactDAQ hardware for four experiments: airflow measurement and PID control, moist air properties, propeller characteristics and forces on a body in an open-jet wind tunnel.
+This one-week course covered PC-based data acquisition for fluid dynamics and thermodynamics experiments. The theory sessions covered the measurement of pressure, temperature, humidity, force, velocity and flow rate, the transmission of sensor signals to a data acquisition system, and LabVIEW programming. In the laboratory, the participants worked in four groups that rotated through four experiments, with two laboratory sessions per experiment. For each one, a LabVIEW program was written on National Instruments CompactDAQ hardware to acquire the sensor signals, run the test and log the data.
 
 📄 [Detailed description](Projects/labview-daq)
 
