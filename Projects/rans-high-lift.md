@@ -21,6 +21,8 @@ The NLR 7301 airfoil with a trailing-edge flap is a standard validation case for
 - compare the computed surface pressure, lift and drag with experimental reference data,
 - quantify the effect of the grid resolution, the order of the discretisation scheme and the turbulence model on the results.
 
+The same case was analysed with a panel method in a separate project: [Two-Element High-Lift Airfoil in JavaFoil](javafoil-high-lift).
+
 **My role:** member of a two-person team that generated the meshes, ran the simulations and wrote the report.
 
 ## Numerical Setup
