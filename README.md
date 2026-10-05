@@ -49,6 +49,23 @@ In a team of four, designed and ran a 105-point test matrix on a propeller aircr
 
 ### Hot-Wire Anemometry and PIV: NACA 0012 Wake
 
-Calibrated a constant-temperature hot-wire against a pitot-static reference and compared it with planar PIV on the same wake at 0°, 5° and 15° angle of attack.
+Calibrated a constant-temperature hot-wire against a pitot-static reference and compared it with planar PIV on the same wake at 0°, 5° and 15° angles of attack.
 
 📄 [Detailed description](Projects/hotwire-piv)
+
+### Delta Wing with Winglets: Low-Speed Wind Tunnel Force Measurements
+
+Undergraduate project and journal publication: lift and drag of a flat delta wing with three winglet configurations, measured with a six-component balance at 10 to 25 m/s.
+
+📄 [Detailed description](Projects/delta-wing)
+
+
+### PC-Based Data Acquisition in LabVIEW: Four Fluid Dynamics Experiments
+
+One-week ATHENS course at the Czech Technical University in Prague. Built LabVIEW interfaces on NI CompactDAQ hardware for four experiments: airflow measurement and PID control, moist air properties, propeller characteristics and forces on a body in an open-jet wind tunnel.
+
+📄 [Detailed description](Projects/labview-daq)
+
+
+
+
