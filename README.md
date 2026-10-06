@@ -158,3 +158,4 @@ Four papers from the bachelor's degree: a first-author paper on bio-inspired slo
 ### Aeromodelling: RC Aircraft Design and Build
 
 Designed and built radio-controlled aircraft from Depron and XPS foam in a student team for aeromodelling competitions during the bachelor's degree. Sized the wings for the mission (gliding or aerobatics) through aspect ratio, taper ratio and tail sizing calculations, and selected the motors, speed controllers, propellers and servos.
+
