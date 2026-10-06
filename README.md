@@ -60,7 +60,7 @@ Undergraduate project and journal publication: lift and drag of a flat delta win
 📄 [Detailed description](Projects/delta-wing)
 
 
-### PC-Based Data Acquisition in LabVIEW: Four Fluid Dynamics Experiments
+### PC-Based Data Acquisition in LabVIEW: Four Thermo-Fluid Dynamics Experiments
 
 One-week course at the Czech Technical University in Prague on PC-based data acquisition. LabVIEW programs on National Instruments CompactDAQ hardware acquired the sensor signals, ran the test and logged the data in four experiments: air flow rate control, moist air properties, propeller characteristics and aerodynamic forces on a body in a wind tunnel.
 
@@ -101,7 +101,7 @@ A two-dimensional incompressible flow solver in Python, formulated with incidenc
 
 📄 [Detailed description](Projects/navier-stokes-solver)
 
-### Large Eddy Simulation: DNS Data Analysis and Turbulent Channel Flow
+### Large Eddy Simulation (LES): DNS Data Analysis and Turbulent Channel Flow
 
 Spectral analysis and filtering of DNS data in Python to compare subgrid-scale models, and large eddy simulations of a turbulent channel flow in OpenFOAM on two grids with five model settings.
 
