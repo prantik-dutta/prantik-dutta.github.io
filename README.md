@@ -30,7 +30,7 @@ This site collects the experiments, analyses and design studies behind that work
 
 ---
 
-## Experimental Aerodynamics & Instrumentation
+## Experimental Testing & Instrumentation
 
 ### MSc Thesis: Unsteady Surface Pressure in a Propeller Slipstream
 
