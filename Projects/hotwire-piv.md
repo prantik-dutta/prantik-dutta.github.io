@@ -13,6 +13,8 @@ title: "Hot-Wire Anemometry and PIV: NACA 0012 Wake"
 
 **Test engineering:** sensor calibration against a Pitot-static reference · selection of overheat ratio and sampling parameters · PIV setup design · laser safety · data acquisition (LabVIEW, DaVis) · image processing and cross-correlation (MATLAB) · cross-validation of two measurement techniques
 
+**Verification:** calibration against a reference · cross-validation of two independent techniques · parameter study of processing settings · identification of the limits of each technique
+
 ## Overview
 
 This exercise measured the flow around a NACA 0012 airfoil at angles of attack of 0°, 5° and 15° with two techniques: a single-wire constant-temperature hot-wire anemometer and planar particle image velocimetry (PIV). Both were applied in the same wind tunnel at a freestream velocity of 10 m/s, and their results were compared in the wake of the airfoil.
@@ -45,6 +47,15 @@ The objectives were to:
 - **Setup design:** a field of view of 1.5 chords (0.15 m) gives a magnification of 0.048. With an f-number of 5.6, the depth of focus is about 4 cm, which exceeds the thickness of the laser sheet.
 - **Image processing:** the airfoil and the two regions shadowed by refraction in the transparent model were masked. The background was removed by subtracting the minimum intensity of each pixel over 10 images. The velocity was computed by cross-correlation with multi-pass interrogation.
 - **Parameter study:** the interrogation window size (16, 32 and 64 pixels), the overlap (0 % and 50 %), the pulse separation (75 µs and 6 µs) and the number of images (10 and 100) were varied. A window of 32 pixels with 50 % overlap and multi-pass interrogation was selected.
+
+### Calibration and verification
+
+| Check | Reference or method | Outcome |
+|---|---|---|
+| Hot-wire calibration | Pitot-static tube, 0 to 20 m/s in steps of 2 m/s | Fourth-order polynomial fitted; test velocity of 10 m/s in the middle of the calibrated range |
+| Sampling adequacy | Integral time scale of 4 ms from the autocorrelation | Minimum about 125 Hz for statistics; wake sampled at 10 kHz for the spectra |
+| PIV processing | Parameter study of window size, overlap, pulse separation and number of images | 32 pixels with 50 % overlap and multi-pass interrogation selected |
+| Hot-wire against PIV | Same wake at 0°, 5° and 15° | Close agreement in attached flow; differ in separated flow at 15°, where PIV resolves the reversed flow |
 
 ## Key Results
 
