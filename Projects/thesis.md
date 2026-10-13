@@ -13,6 +13,8 @@ title: "MSc Thesis: Unsteady Surface Pressure in a Propeller Slipstream"
 
 **Test engineering:** test planning · test matrix design · test execution · root cause analysis · troubleshooting · fault diagnosis · sensor calibration and validation · instrumentation · multichannel data acquisition · signal processing (MATLAB, Python) · spectral analysis · test reporting
 
+**Systems engineering:** system integration · interfaces with the data acquisition · verification against independent references · fault isolation and root-cause analysis · test procedures and documentation
+
 ## Overview
 
 In a propeller aircraft, the wing and other bodies downstream of the propeller operate in the slipstream and are subject to periodic impingement of blade-tip vortices and blade wakes. This interaction alters the unsteady surface loading, the location of boundary-layer transition and the radiated noise. Published unsteady surface-pressure data for this interaction are limited, particularly for propellers operating in negative thrust, the regime relevant to regenerative braking. This thesis addresses that gap experimentally for an airfoil immersed in a propeller slipstream.
@@ -22,7 +24,7 @@ The measurements were acquired with a flexible printed circuit board (PCB) carry
 1. **Validation.** Assessment of the microphone and pressure-sensor measurements against reference measurements.
 2. **Propeller-airfoil interaction.** Measurement of the unsteady surface pressure on a NACA 63₃-018 airfoil in a propeller slipstream, under positive and negative thrust.
 
-**My role:** defined the test matrices for both campaigns (validation cases in the M-Tunnel and 12 propeller-airfoil configurations in the SLT), validated and benchmarked the device against reference measurements, conducted both wind tunnel campaigns including the oil-flow visualisation, and processed and analysed the data in MATLAB and Python.
+**My role:** defined the test matrices for both campaigns (validation cases in the M-Tunnel and 12 propeller-airfoil configurations in the SLT), validated and benchmarked the device against reference measurements, conducted both wind tunnel campaigns including the oil-flow visualisation, and processed and analysed the data in MATLAB and Python. I worked to the test procedures, accounting for the lab's safety steps, and reported to the R&D team which sensors could be trusted.
 
 ## Experimental Setup
 
@@ -44,6 +46,21 @@ The measurements were acquired with a flexible printed circuit board (PCB) carry
 ![The M-Tunnel at TU Delft](../images/thesis-mtunnel.jpg)
 
 ![The sensor board wrapped around the leading edge of the airfoil model](../images/thesis-model-with-board.jpg)
+
+### Verification summary
+
+| Check | Reference | Tolerance | Result |
+|---|---|---|---|
+| Microphones, tone | 500 Hz source | ±1% | 499.6 Hz |
+| Microphones, calibration | Pistonphone, 1 kHz, 114 dB | ±1 dB | Gain set per microphone; Mic 14 deviated and was flagged |
+| Cylinder shedding | St = 0.2 | ±3% | St 0.199 to 0.204 at 5, 10, 15 and 20 m/s |
+| Pressure sensors, before fix (M-Tunnel, α = 5.5°) | Taps and XFOIL | Cp trend agreement | Failed: higher suction at all four board positions |
+| Pressure sensors, after fix, 5 m/s | Taps and XFOIL | Cp trend agreement | Agreed |
+| Pressure sensors, after fix, 10 m/s | Taps and XFOIL | Cp trend agreement | Agreed |
+| Pressure sensors, after fix, 15 m/s | Taps and XFOIL | Cp trend agreement | Agreed |
+| Pressure sensors, after fix, 20 m/s | Taps and XFOIL | Cp trend agreement | Agreed |
+
+*Tolerances are the bounds I judged acceptable against the data; the report assessed agreement qualitatively.*
 
 ### Campaign 2: propeller slipstream in the Small Low-Turbulence Tunnel
 
@@ -72,23 +89,23 @@ The measurements were acquired with a flexible printed circuit board (PCB) carry
 
 ### 1. Validation of the microphone measurements
 
-A 500 Hz reference tone was measured at 499.6 Hz. In the cylinder wake at 20 m/s, the spectrum shows a vortex-shedding peak at 210.4 Hz, corresponding to a Strouhal number of 0.2003. This agrees with the expected value of approximately 0.2 for a circular cylinder at subcritical Reynolds numbers. At freestream velocities of 5, 10, 15 and 20 m/s, the shedding frequency scaled linearly with velocity (52, 107, 161 and 210 Hz), with the Strouhal number remaining between 0.199 and 0.204.
+A 500 Hz reference tone was measured at 499.6 Hz. In the cylinder wake at 20 m/s, the spectrum shows a vortex-shedding peak at 210.4 Hz, corresponding to a Strouhal number of 0.2003. This agrees with the expected value of approximately 0.2 for a circular cylinder at subcritical Reynolds numbers. At freestream velocities of 5, 10, 15 and 20 m/s, the shedding frequencies were 52, 107, 161 and 210 Hz, and the Strouhal number stayed between 0.199 and 0.204.
 
 ![Power spectral density of the microphone signal in the cylinder wake at 20 m/s, with the vortex-shedding peak at 210 Hz](../images/thesis-psd-cylinder.png)
 
-### 2. Pressure-sensor discrepancy: root cause and correction
+### 2. Fault isolation and root cause: a sensor installation error
 
-In the validation campaign, the pressure sensors on the board measured consistently higher suction than the pressure taps and the XFOIL prediction, at all four mounting positions of the board. The discrepancy was traced to the sensor geometry: the sensors protrude 0.75 mm above the board surface, and the local flow acceleration over the protrusion reduces the measured static pressure.
+In the validation campaign, the pressure sensors on the board measured consistently higher suction than the pressure taps and the XFOIL prediction, at all four mounting positions of the board. The taps agreed with XFOIL, so the error was in the board and not in the model or the flow. The discrepancy was traced to the sensor geometry: the sensors protrude 0.75 mm above the board surface, and the local flow acceleration over the protrusion reduces the measured static pressure.
 
 ![Before correction (M-Tunnel, α = 5.5°): pressure coefficient from the board at four mounting positions, compared with the pressure taps and XFOIL](../images/thesis-cp-before-fix.png)
 
-For the second campaign, a strip of Kapton tape was applied adjacent to the sensors to raise the surrounding surface to sensor height and remove the step. With this correction, the board measurements agreed with the pressure taps and XFOIL.
+For the second campaign, I proposed covering the step with a strip of Kapton tape adjacent to the sensors, raising the surrounding surface to sensor height. With this correction, the board measurements agreed with the pressure taps and XFOIL.
 
 ![Kapton tape strip applied adjacent to the pressure sensors](../images/thesis-kapton-tape.jpg)
 
 ![After correction (SLT, nacelle only, α = 9°): pressure coefficient from the board, the pressure taps and XFOIL](../images/thesis-cp-after-fix.png)
 
-The correction introduced a secondary effect: the tape disturbed the flow over the middle and lower microphone rows, so the unsteady analysis is based on the upper row. Both effects are documented in the thesis as limitations of the device.
+The correction introduced a side effect: the tape disturbed the flow over the middle and lower microphone rows, so I based the unsteady analysis on the upper row only and excluded the other rows. Both effects are documented in the thesis as limitations of the device, with a flush sleeve around the sensors as the recommended fix, and the finding went back to the R&D team.
 
 ### 3. Detection of the laminar separation bubble
 
