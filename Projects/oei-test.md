@@ -13,6 +13,8 @@ title: "Wind Tunnel Test Campaign: Stability and Control in One-Engine-Inoperati
 
 **Test engineering:** test matrix design · response surface method · six-component balance measurements · near-field microphone measurements · thrust estimation · blockage and lift-interference corrections · data reduction (MATLAB) · test reporting
 
+**Test planning:** test matrix design · planning within a fixed tunnel slot · indirect measurement (thrust estimation) · fault isolation · wind tunnel corrections · test reporting
+
 ## Overview
 
 Failure of one engine on a twin-propeller aircraft produces asymmetric thrust and a yawing moment that the vertical tail and rudder have to balance. This campaign quantified the effect of the one-engine-inoperative (OEI) condition on a scaled aircraft model with propellers mounted on the horizontal tailplane. The objectives were to determine:
@@ -24,7 +26,7 @@ Failure of one engine on a twin-propeller aircraft produces asymmetric thrust an
 
 The influence of the wind tunnel boundary corrections and of the Reynolds number on these quantities was assessed as well.
 
-**My role:** member of a four-person team. Contributed to the design of the test matrix, the balance and microphone measurements, the data reduction and the final report.
+**My role:** member of a four-person team. Contributed to the design of the test matrix for the 180-minute tunnel slot, the balance and microphone measurements, the data reduction and the final report.
 
 ## Experimental Setup
 
@@ -57,6 +59,15 @@ The influence of the wind tunnel boundary corrections and of the Reynolds number
 - **Advance ratio:** J = 1.75 with both propellers operating, selected from the cruise condition in which thrust equals drag. J = 1.6 for the OEI case, in which one propeller delivers the full cruise thrust, and J = 1.2 as a higher-thrust OEI case.
 - **Attitude and control:** angle of attack 0°, 2° and 4°. Sideslip angle 0°, 5° and 10°. Rudder deflection 0°, 7° and 14°.
 - **Size:** 105 measurement points in a 180-minute tunnel slot. Each block covers five points in the plane of angle of attack and sideslip, and a response surface model is fitted to the data afterwards.
+
+### Test plan and risks
+
+| Risk | Mitigation |
+|---|---|
+| Limited tunnel time (180 minutes) | 105 points organised in blocks of five, so a response surface model could be fitted to the data afterwards |
+| No thrust sensor on the model | Thrust inferred from the balance difference between powered and fixed-propeller runs at the same flow condition |
+| Unwanted tones in the noise spectra | Tones at multiples of the shaft frequency attributed to vibration of the starboard motor |
+| Reflections in the hard-walled test section | Noise analysis restricted to the usable microphone at 60° |
 
 ## Method
 
