@@ -1,6 +1,6 @@
 # Prantik Dutta
 
-**Aerospace Engineer: Experimental Aerodynamics · Wind Tunnel Testing · Instrumentation · Propeller Aerodynamics**
+**Aerospace Engineer: Testing & Verification · Experimental Aerodynamics · Instrumentation · Propeller Aerodynamics**
 
 [Email](mailto:dutta.prantik13@gmail.com) · [LinkedIn](https://www.linkedin.com/in/prantik-dutta-721447182) · [MSc Thesis](https://resolver.tudelft.nl/uuid:d76e911a-a6f4-4718-b5b9-d69512647b58) · [ORCID](https://orcid.org/0000-0003-2318-2727)
 
@@ -71,6 +71,17 @@ One-week course at the Czech Technical University in Prague on PC-based data acq
 
 ---
 
+## Industry Project
+
+### Hydrogen-Powered Blended Wing Body Aircraft: Joint Interdisciplinary Project with Airbus
+
+Ten-week study in a team of seven with Airbus Netherlands: fuel selection, hydrogen turbofan design, tank and weight estimation and mission emissions for a blended wing body aircraft, with a cost and stakeholder analysis by the non-technical part of the team.
+
+📄 [Detailed description](Projects/jip-airbus)
+
+
+---
+
 ## Propeller and Rotor-Wake Aerodynamics
 
 ### Rotor Aerodynamics: BEM, Lifting-Line and Unsteady Panel Models
@@ -135,16 +146,6 @@ Lift curve of the NLR 7301 airfoil with flap from a panel method with three stal
 Induced drag of a wing with a winglet at cant angles from 0° to 90° in AVL: 15 % reduction for the vertical winglet and 24 % for the tip extension.
 
 📄 [Detailed description](Projects/avl-winglet)
-
----
-
-## Industry Project
-
-### Hydrogen-Powered Blended Wing Body Aircraft: Joint Interdisciplinary Project with Airbus
-
-Ten-week study in a team of seven with Airbus Netherlands: fuel selection, hydrogen turbofan design, tank and weight estimation and mission emissions for a blended wing body aircraft, with a cost and stakeholder analysis by the non-technical part of the team.
-
-📄 [Detailed description](Projects/jip-airbus)
 
 
 ---
