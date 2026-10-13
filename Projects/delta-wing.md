@@ -11,13 +11,15 @@ title: "Delta Wing with Winglets: Low-Speed Wind Tunnel Force Measurements"
 
 **Experimental aerodynamics:** delta wing · winglets · low-speed wind tunnel testing · lift and drag measurements · spanwise flow
 
-**Test engineering:** model design (Creo Parametric) · six-component balance · test matrix over angle of attack and velocity · data acquisition · technical publication
+**Test engineering:** six-component balance · test matrix over angle of attack and velocity · data acquisition · post-processing · technical publication
+
+**Verification:** data quality review · identification of measurement errors (zero offset, tare, blockage) · comparison of test and simulation conditions · test improvement plan
 
 ## Overview
 
 This project compared a flat delta wing with three winglet configurations in a low-speed wind tunnel. Lift and drag were measured with a six-component balance over a range of angles of attack and freestream velocities, to assess the effect of the winglet angle on the forces. The spanwise flow over two of the winglet configurations was simulated in SimScale. The work was carried out during my bachelor's degree and led to a journal publication.
 
-**My role:** co-author, second of four authors.
+**My role:** installed the models and set up the wind tunnel and the six-component balance, ran the wind tunnel tests, and post-processed the results.
 
 ## Experimental Setup
 
@@ -41,9 +43,17 @@ This project compared a flat delta wing with three winglet configurations in a l
 - At 15, 20 and 25 m/s, the measured lift increases with angle of attack up to 20° for all three configurations, with no stall inside the tested range. This is consistent with the delayed stall of delta wings.
 - The paper concluded that the 90° winglet was the preferred configuration, based on the drag data and on the simulations, which showed a lower spanwise velocity toward the trailing edge of the 90° winglet than of the 45° winglet.
 
-## Assessment
+## Assessment of the Data
 
-The reported coefficients increase with freestream velocity at a fixed angle of attack, and the drag coefficient becomes negative at the higher velocities. Both indicate that the balance readings were not fully corrected for zero offset and support tare loads. The absolute values are therefore not reliable, and the comparison between configurations is qualitative. The simulations were run at 80 m/s, so they are not directly comparable with the measurements at 10 to 25 m/s.
+In reviewing the results, I checked the data for consistency with expected behaviour.
+
+| Check | Finding | Likely cause |
+|---|---|---|
+| Coefficients at a fixed angle of attack should not change with velocity | The coefficients increase with freestream velocity | Balance readings not fully corrected for zero offset and support tare loads |
+| Drag coefficient should stay positive | Negative drag coefficient at the higher velocities | Same: uncorrected zero offset and tare |
+| Simulation and test should use the same conditions | Simulations run at 80 m/s; tests at 10 to 25 m/s | Not directly comparable |
+
+The absolute values are therefore not reliable, and the comparison between configurations is qualitative.
 
 A repeat of this test would include wind-off zero measurements at every angle of attack, tare and interference runs for the support, repeat runs to quantify the scatter, and blockage corrections. These steps are part of the later wind tunnel work on this site.
 
