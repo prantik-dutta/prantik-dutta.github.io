@@ -12,11 +12,11 @@
 
 ## About
 
-I'm an aerospace engineer with an MSc from TU Delft (Aerodynamics & Wind Energy, 2023–2025). Most of my work has been in the wind tunnel: setting up the test, installing and calibrating the instrumentation, running the campaign, and checking the data before anyone relies on it. I like the hands-on side of testing, including the troubleshooting and root-cause analysis.
+I am an aerospace engineer with an MSc from TU Delft (Aerodynamics & Wind Energy, 2023–2025). My work is mainly in wind tunnel testing: planning the test, installing and calibrating the instrumentation, running the campaign, and verifying the data before anyone relies on it. Fault-finding and root-cause analysis, when a sensor or a channel misbehaves, is the part of the work I value most.
 
-My thesis studied how a propeller slipstream affects the unsteady surface pressure and acoustics on an airfoil behind it. I installed and calibrated a new flexible sensor board with 18 microphones and 6 pressure sensors, planned the test matrix, and ran the campaigns.
+My thesis studied how a propeller slipstream affects the unsteady surface pressure and acoustics on an airfoil behind it. I installed and calibrated a new flexible sensor board with 18 microphones and 6 pressure sensors, verified each sensor against independent references, planned the test matrix and ran both campaigns.
 
-Alongside the experiments, I have experience with low-fidelity tools (XFOIL, JavaFoil, AVL, JavaProp) for design and aerodynamic studies and CFD (OpenFOAM, Fluent, CFX).
+Alongside the experiments, I have used low-fidelity tools (XFOIL, JavaFoil, AVL, JavaProp) for design studies and CFD (OpenFOAM, Fluent, CFX) where the physics requires it. In a seven-person project with Airbus Netherlands, I worked from top-level aircraft requirements to the sizing of a hydrogen engine and tank.
 
 This site collects the experiments, analyses and design studies behind that work. Each project page shows the setup, the method and the results.
 
