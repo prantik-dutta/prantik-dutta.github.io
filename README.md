@@ -127,6 +127,8 @@ Two-way fluid-structure interaction of an elastically mounted cylinder in ANSYS 
 📄 [Detailed description](Projects/fsi-cylinder)
 
 
+---
+
 ## Low-Fidelity Aerodynamic Analysis
 
 ### Airfoil Analysis and Redesign in XFOIL: Transition and Laminar Separation Bubble
