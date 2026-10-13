@@ -22,11 +22,13 @@ This site collects the experiments, analyses and design studies behind that work
 
 ## Tools
 
-**Experimental:** hot-wire anemometry (CTA), PIV (DaVis), oil-flow visualisation, force balances, microphone arrays, pressure sensors, LabVIEW data acquisition
+**Experimental:** [hot-wire anemometry (CTA)](Projects/hotwire-piv), [PIV (DaVis)](Projects/hotwire-piv), [oil-flow visualisation](Projects/thesis), [force balances](Projects/oei-test), [microphones](Projects/thesis), [pressure sensors](Projects/thesis), [Pt100 temperature probes](Projects/labview-daq), [pitot-static probes](Projects/hotwire-piv)
 
-**Computational:** OpenFOAM (LES), Fluent (RANS), CFX, XFOIL, JavaFoil, AVL, JavaProp
+**Data acquisition and calibration:** [LabVIEW data acquisition on National Instruments hardware](Projects/labview-daq), [multichannel data acquisition](Projects/thesis), [pistonphone calibration](Projects/thesis)
 
-**Programming:** MATLAB, Python, LabVIEW
+**Computational:** [OpenFOAM (LES)](Projects/les), [Fluent (RANS)](Projects/rans-high-lift), [ANSYS CFX (fluid-structure interaction)](Projects/fsi-cylinder), [XFOIL](Projects/xfoil-airfoil), [JavaFoil](Projects/javafoil-high-lift), [AVL](Projects/avl-winglet), [JavaProp](Projects/propeller-bem)
+
+**Programming:** MATLAB, Python, [LabVIEW](Projects/labview-daq)
 
 ---
 
