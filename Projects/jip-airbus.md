@@ -13,6 +13,8 @@ title: "Hydrogen-Powered Blended Wing Body Aircraft: Joint Interdisciplinary Pro
 
 **Project work:** industry collaboration · interdisciplinary teamwork · conceptual design study · literature review · expert interviews · technical reporting
 
+**Systems engineering:** top-level aircraft requirements · requirements-driven design · trade-off analysis · design verification against assumptions · interdisciplinary stakeholder reporting
+
 ## Overview
 
 This ten-week project, with Airbus Netherlands as the industry partner, addressed one question: what role can blended wing body (BWB) aircraft play in bringing aviation to net-zero emissions by 2050? The team combined a technical analysis of the aircraft, its fuel and its propulsion system with a business, financial, risk and ethics analysis of its introduction.
@@ -25,7 +27,21 @@ The technical analysis compared three combinations of fuel and propulsion for a 
 
 The final proposal is a BWB with liquid hydrogen engines and boundary layer ingestion. Its in-flight emissions on the reference route were quantified and compared with a current single-aisle aircraft.
 
-**My role:** worked on the technical analysis in a seven-person interdisciplinary team: mission and baseline aircraft definition, fuel selection, sizing calculations for the hydrogen engine, tank and weight estimation, and the emissions comparison.
+**My role:** I worked on the technical analysis in a seven-person interdisciplinary team: mission and baseline aircraft definition, fuel selection, sizing calculations for the hydrogen engine, tank and weight estimation, and the emissions comparison.
+
+## Requirements and Verification
+
+The aircraft was defined from the top-level requirements of the A320neo. The table shows each requirement, the value used and how the design was checked against it.
+
+| Requirement | Value | How it was checked |
+|---|---|---|
+| Passengers | 150 | Baseline BWB taken from a published study with the same top-level requirements as the A320neo |
+| Cruise | Mach 0.78, flight level 410 (12.5 km) | Engine design point set at top of climb, 12,500 m, Mach 0.78 |
+| Mission | London to Athens, 2428 km, plus 70-minute diversion and reserve | Mission profile built for the nominal and diversion legs; fuel includes 5 % contingency and boil-off |
+| Thrust | 21.1 kN net per engine at the design point | GasTurb 14 model; all off-design points of the mission stay inside the high-pressure compressor surge limit |
+| Take-off weight | Closed after adding engines, tanks and fuel system | Maximum take-off weight recalculated: 74.2 t to 70.2 t, a reduction of 5.4 % |
+| Climate effect | Net-zero ambition for 2050 | CO2-equivalent emissions on the reference route: 12.6 t against 33.7 t for the A320neo, a reduction of 63 % |
+| Fuel burn | Engine simulation against a Breguet range check | About 20 % difference in cruise; the engine was sized for top-of-climb thrust of the baseline and not resized, so cruise fuel burn is conservative |
 
 ## Technical Analysis
 
@@ -53,12 +69,23 @@ The results in this section are the work of the technical part of the team.
 - **Liquefied natural gas:** lower emissions than kerosene, and the BWB offers the volume for the cryogenic tanks that a conventional aircraft lacks. The team treated it as a transitional option.
 - **Liquid hydrogen:** no carbon emissions in flight. Its low volumetric energy density requires large tanks, which fit in the transition region between the centre body and the outer wing of a BWB. It was selected for the final proposal.
 
+| Option | Strength | Drawback | Outcome |
+|---|---|---|---|
+| Kerosene | Proven; BWB cuts fuel burn through higher lift-to-drag | Emissions remain carbon-based | Reference case |
+| Liquefied natural gas | Lower emissions than kerosene; BWB has volume for cryogenic tanks | Still carbon-based | Transitional option |
+| Liquid hydrogen | No carbon emissions in flight | Low volumetric energy density needs large tanks, which fit between centre body and outer wing | Selected |
+
 ### 3. Engine design
 
 The team modelled a liquid hydrogen turbofan in GasTurb 14.
 
 - **Sizing:** the design point is the top of climb, at 12,500 m and Mach 0.78, with a required net thrust of 21.1 kN per engine.
 - **Parametric study:** the bypass ratio was varied from 8 to 13 and the turbine inlet temperature from 1500 K to 1750 K, to find the lowest specific fuel consumption at the required thrust. The turbine inlet temperature was limited to 1650 K for the turbine materials and the NOx emissions.
+
+| Parameter | Range studied | Criterion or limit | Selected |
+|---|---|---|---|
+| Bypass ratio | 8 to 13 | Lowest specific fuel consumption at the required thrust | 12 |
+| Turbine inlet temperature | 1500 to 1750 K | Limited by turbine materials and NOx emissions | 1650 K |
 
 | Parameter | Value |
 |---|---|
@@ -113,7 +140,7 @@ This part of the project was carried out by the team members from the other disc
 - **Risk and ethics:** the main risks are technology readiness, hydrogen availability and public acceptance. The report proposes mitigation measures for each.
 - **Recommendations to Airbus:** develop hydrogen-compatible BWB designs, form partnerships for hydrogen supply and storage, invest in boundary layer ingestion and distributed propulsion, and run pilot programmes with airlines.
 
-## Limitations
+## Limitations and Assumptions
 
 - **Baseline aircraft:** the weights of the baseline BWB come from a published study with material technology projected for 2035. The wing area, the lift-to-drag ratio and the cruise altitude were kept constant when the hydrogen system was added. A full resizing of the aircraft was outside the scope.
 - **Engine sizing:** the engine was sized for the top-of-climb thrust of the baseline aircraft and not resized for the lighter hydrogen aircraft. The fuel burn in cruise is therefore conservative. A check with the Breguet range equation differed from the engine simulation by about 20 % in cruise.
