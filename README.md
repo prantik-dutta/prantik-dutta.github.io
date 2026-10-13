@@ -24,6 +24,8 @@ This site collects the experiments, analyses and design studies behind that work
 
 **Experimental:** [hot-wire anemometry (CTA)](Projects/hotwire-piv), [PIV (DaVis)](Projects/hotwire-piv), [oil-flow visualisation](Projects/thesis), [force balances](Projects/oei-test), [microphones](Projects/thesis), [pressure sensors](Projects/thesis), [Pt100 temperature probes](Projects/labview-daq), [pitot-static probes](Projects/hotwire-piv)
 
+**Systems engineering:** [requirements and trade studies](Projects/jip-airbus#requirements-and-verification) · [verification against reference measurements](Projects/thesis#verification-summary) · [fault isolation and root cause](Projects/thesis#fault-isolation-and-root-cause-a-sensor-installation-error) · [test planning and risks](Projects/oei-test#test-plan-and-risks) · [calibration and cross-validation](Projects/hotwire-piv#calibration-and-verification) · [data quality review](Projects/delta-wing#assessment-of-the-data)
+
 **Data acquisition and calibration:** [LabVIEW data acquisition on National Instruments hardware](Projects/labview-daq), [multichannel data acquisition](Projects/thesis), [pistonphone calibration](Projects/thesis)
 
 **Computational:** [OpenFOAM (LES)](Projects/les), [Fluent (RANS)](Projects/rans-high-lift), [ANSYS CFX (fluid-structure interaction)](Projects/fsi-cylinder), [XFOIL](Projects/xfoil-airfoil), [JavaFoil](Projects/javafoil-high-lift), [AVL](Projects/avl-winglet), [JavaProp](Projects/propeller-bem)
