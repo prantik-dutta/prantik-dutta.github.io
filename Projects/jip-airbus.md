@@ -31,17 +31,17 @@ The final proposal is a BWB with liquid hydrogen engines and boundary layer inge
 
 ## Requirements and Verification
 
-The aircraft was defined from the top-level requirements of the A320neo. The table shows each requirement, the value used and how the design was checked against it.
+The aircraft was defined from the top-level requirements it shares with the A320neo. The table shows each requirement or target, the value used and how the design was checked against it.
 
-| Requirement | Value | How it was checked |
+| Requirement or check | Value | How it was checked |
 |---|---|---|
 | Passengers | 150 | Baseline BWB taken from a published study with the same top-level requirements as the A320neo |
 | Cruise | Mach 0.78, flight level 410 (12.5 km) | Engine design point set at top of climb, 12,500 m, Mach 0.78 |
 | Mission | London to Athens, 2428 km, plus 70-minute diversion and reserve | Mission profile built for the nominal and diversion legs; fuel includes 5 % contingency and boil-off |
 | Thrust | 21.1 kN net per engine at the design point | GasTurb 14 model; all off-design points of the mission stay inside the high-pressure compressor surge limit |
-| Take-off weight | Closed after adding engines, tanks and fuel system | Maximum take-off weight recalculated: 74.2 t to 70.2 t, a reduction of 5.4 % |
+| Weight closure | Maximum take-off weight recalculated with the new engines, tanks and fuel system | 74.2 t to 70.2 t, a reduction of 5.4 % |
 | Climate effect | Net-zero ambition for 2050 | CO2-equivalent emissions on the reference route: 12.6 t against 33.7 t for the A320neo, a reduction of 63 % |
-| Fuel burn | Engine simulation against a Breguet range check | About 20 % difference in cruise; the engine was sized for top-of-climb thrust of the baseline and not resized, so cruise fuel burn is conservative |
+| Fuel burn cross-check | Engine simulation against a Breguet range check | About 20 % difference in cruise; the engine was sized for top-of-climb thrust of the baseline and not resized, so cruise fuel burn is conservative |
 
 ## Technical Analysis
 
@@ -86,6 +86,8 @@ The team modelled a liquid hydrogen turbofan in GasTurb 14.
 |---|---|---|---|
 | Bypass ratio | 8 to 13 | Lowest specific fuel consumption at the required thrust | 12 |
 | Turbine inlet temperature | 1500 to 1750 K | Limited by turbine materials and NOx emissions | 1650 K |
+
+Selected engine design:
 
 | Parameter | Value |
 |---|---|
