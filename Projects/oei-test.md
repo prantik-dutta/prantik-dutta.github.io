@@ -64,8 +64,9 @@ The influence of the wind tunnel boundary corrections and of the Reynolds number
 
 | Risk | Mitigation |
 |---|---|
-| Limited tunnel time (180 minutes) | 105 points organised in blocks of five, so a response surface model could be fitted to the data afterwards |
+| Limited tunnel time (180 minutes) | 105 points organised in blocks of five and ordered by priority, so the most important blocks were measured first |
 | No thrust sensor on the model | Thrust inferred from the balance difference between powered and fixed-propeller runs at the same flow condition |
+| Zero measurement could fail | Backup thrust method prepared, using tail-off data collected before the experiment |
 | Unwanted tones in the noise spectra | Tones at multiples of the shaft frequency attributed to vibration of the starboard motor |
 | Reflections in the hard-walled test section | Noise analysis restricted to the usable microphone at 60° |
 
