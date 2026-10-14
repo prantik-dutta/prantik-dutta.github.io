@@ -34,7 +34,7 @@ The influence of the wind tunnel boundary corrections and of the Reynolds number
 
 - **Facility:** Low-Turbulence Tunnel (LTT), TU Delft. Closed octagonal test section, 1.80 m × 1.25 m, with a cross-sectional area of 2.07 m².
 - **Model:** aircraft model with two six-bladed propellers of 0.2032 m diameter mounted on the horizontal tailplane. Wing span 1.397 m, mean aerodynamic chord 0.165 m.
-- **Installation:** the model is mounted inverted on three struts connected to the external balance above the test section. The aft strut sets the angle of attack. The sideslip angle is set by rotating the balance together with the turntable.
+- **Installation:** The model is mounted inverted on three struts connected to the external balance above the test section. The aft strut sets the angle of attack. The sideslip angle is set by rotating the balance together with the turntable.
 - **Transition:** boundary-layer transition is forced with trip strips on the wing, tailplanes, fuselage and nacelles.
 
 ![The Low-Turbulence Tunnel at TU Delft. Photo: TU Delft, AE4115 course material](../images/oei-ltt-facility.jpg)
@@ -71,8 +71,8 @@ The influence of the wind tunnel boundary corrections and of the Reynolds number
 
 ## Method
 
-- **Thrust estimation:** the model has no thrust sensor. The propeller thrust is obtained from the difference between the balance data with the propellers operating and with the propellers fixed, at the same flow condition.
-- **Response surface modelling:** for each of the six operating conditions, the force and moment coefficients are modelled as functions of angle of attack, sideslip angle and rudder deflection, using 15 measurement points per condition. The lift coefficient is fitted with a linear model and the other coefficients with a second-order model.
+- **Thrust estimation:** The model has no thrust sensor. The propeller thrust is obtained from the difference between the balance data with the propellers operating and with the propellers fixed, at the same flow condition.
+- **Response surface modelling:** for each of the six operating conditions, the force and moment coefficients are modelled as functions of angle of attack, sideslip angle and rudder deflection, using 15 measurement points per condition. The lift coefficient is fitted with a linear model and the other coefficients with a second-order model. The 90 points of the six conditions plus 15 propeller-fixed points for the thrust estimation make up the 105 points of the test matrix.
 - **Boundary corrections:** solid blockage calculated per model component (total blockage factor 0.0064), wake blockage with Maskell's method, propeller slipstream blockage, and lift-interference corrections to the angle of attack and the drag coefficient.
 
 ## Key Results
@@ -109,7 +109,7 @@ The lift coefficient is nearly unaffected by the propeller condition. The drag c
 
 ### 6. Propeller noise
 
-The spectra show a tone at the blade-passing frequency, six times the shaft frequency. At 30 m/s this tone is about 90 dB with both propellers operating and about 75 dB for OEI at J = 1.6, and the broadband level is higher with both propellers operating. With both propellers operating, tones also appear at every multiple of the shaft frequency, which is attributed to vibration of the starboard motor.
+The spectra show a tone at the blade-passing frequency, six times the shaft frequency. At 30 m/s, this tone is about 90 dB with both propellers operating and about 75 dB for OEI at J = 1.6, and the broadband level is higher with both propellers operating. With both propellers operating, tones also appear at every multiple of the shaft frequency, which is attributed to vibration of the starboard motor.
 
 ![Sound pressure level spectra with both propellers operating and in the OEI condition at 30 m/s, frequency normalised by the shaft frequency](../images/oei-noise-both-vs-oei.jpg)
 
@@ -123,9 +123,9 @@ Increasing the velocity from 20 to 30 m/s at J = 1.2 raises the broadband level 
 
 ## Limitations
 
-- **Thrust:** the thrust is not measured directly. It is derived from the difference between two balance measurements.
-- **Tail-off data:** the tail could not be removed during the test, so the corrections use tail-off data from an earlier test of the same model.
+- **Thrust:** The thrust is not measured directly. It is derived from the difference between two balance measurements.
+- **Tail-off data:** The tail could not be removed during the test, so the corrections use tail-off data from an earlier test of the same model.
 - **Correction factors:** the factors for the octagonal test section are approximated with data for rectangular and elliptic sections.
-- **Acoustics:** the test section is hard-walled and not acoustically treated, so the spectra include reflections. Three of the six fuselage microphones gave unusable data, and the analysis is based on the microphone at 60°.
+- **Acoustics:** The test section is hard-walled and not acoustically treated, so the spectra include reflections. Three of the six fuselage microphones gave unusable data, and the analysis is based on the microphone at 60°.
 
 [← Back to portfolio](../)
