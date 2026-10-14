@@ -158,7 +158,7 @@ Induced drag of a wing with a winglet at cant angles from 0° to 90° in AVL: 15
 
 ### Publications
 
-Four papers from the bachelor's degree: a first-author paper on bio-inspired slotted winglets, two co-authored papers on an albatross-inspired UAV wing with a bell-shaped lift distribution, and a single-author review.
+Five papers from the bachelor's degree: a first-author paper on bio-inspired slotted winglets, two co-authored papers on an albatross-inspired UAV wing with a bell-shaped lift distribution, a co-authored wind tunnel study of a delta wing with winglets, and a single-author review.
 
 📄 [List of publications](Projects/publications)
 
